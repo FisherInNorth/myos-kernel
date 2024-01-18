@@ -1,1 +1,0 @@
-rootfs / root rw,relatime,errors=remount-ro 0 0

@@ -20,22 +20,4 @@ kernel-qemu
 kernel-qemu.asm
 kernel-qemu.sym
 sdcard.img
-kernel-qemu
-os.bin
-.vscode
-src/*.d
-src/*.o
-usrinit/*.o
-usrinit/*.d
-src/include/sysnum.h
-src/bin.S
-src/kernel
-src/kernel.asm
-src/kernel.sym
-src/syscall.c
-usrinit/_sacrifice
-usrinit/initcode
-usrinit/sacrifice.asm
-usrinit/sacrifice.sym
-usrinit/usys.S
 

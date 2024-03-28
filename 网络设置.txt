@@ -1,0 +1,70 @@
+
+
+
+
+
+主机  192.168.57.44
+华山派   192.168.57.50
+Ubuntu  192.168.57.81
+
+
+PC以太网：192.168.1.20
+虚拟机下的linux（ubuntu）：192.168.1.21
+华山派：192.168.1.22
+
+
+
+挂载SD卡
+mount /dev/mmcblk1 /mnt/sd
+
+
+1. 设备树编译（devicetree.dts --> devicetree.dtb）
+（1）将devicetree.dts存放到Linux源码的以下路径中：
+
+# Linux源码位置~/linux/linux-3.10.1
+~/linux/linux-3.10.1/arch/arm/boot/dts/devicetree.dts
+  (2)   cd至源码根目录下，运行以下命令：
+
+./scripts/dtc/dtc -I dts -O dtb -o devicetree.dtb arch/arm/boot/dts/devicetree.dts
+  (3) 在源码根目录下生成编译后的devicetree.dtb
+
+
+
+
+
+
+
+setenv ipaddr 192.168.1.22
+setenv ethaddr 00:04:9f:04:d2:35
+setenv gatewayip 192.168.1.1
+setenv netmask 255.255.255.0
+setenv serverip 192.168.1.21
+saveenv
+tftp ${uImage_addr} xvos.itb
+bootm ${uImage_addr}
+tftp 0x80200000 xvos.itb
+bootm 0x80200000
+
+mkimage -f cv1811.its ./xvos.itb
+fatload mmc 1 0x80200000 xvos.itb
+bootm 0x80200000
+
+mmc write 0x80200000 2 1EB6C
+
+125804
+1EB6C
+fatload mmc 1 0x7FFFFFFF xvos.itb && bootm 0x7FFFFFFF
+
+fatload mmc 1 0x90000000 xvos.itb
+sleep 15 && bootm 0x90000000
+
+
+
+fatload mmc 1 0x80200000 xvos.itb && bootm 0x80200000
+
+JokicX/oskernel2023-x.git
+
+
+
+202310145101587
+521502

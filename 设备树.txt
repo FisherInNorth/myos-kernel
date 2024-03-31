@@ -1,0 +1,77 @@
+#address-cells         gpio@03023000          serial@04150000
+#size-cells            gpio@05021000          serial@04160000
+adc@0300A100           i2c@04000000           serial@04170000
+aliases                i2c@04020000           serial@041C0000
+audio_clock            i2c@04030000           soc
+base                   i2c@04040000           sound_adc
+bt_pin                 i2s@04100000           sound_dac
+chosen                 i2s@04130000           spi0@04180000
+cif                    i2s_mclk               spi1@04190000
+clk-reset-controller   i2s_subsys             spi2@041A0000
+clock-controller       ive                    spi3@041B0000
+compatible             jpu                    stmmac-axi-config
+cpus                   mars_cooling           sys
+cv-emmc@4300000        memory@80000000        sysdma_remap
+cv-sd@4310000          mipi_tx                thermal-zones
+cv-wd@0x3010000        model                  thermal@030E0000
+cvi_vc_drv             mon                    top_misc_ctrl@3000000
+cviaudio_core          name                   tpu
+cvifb                  oscillator             tx-queues-config
+cvitek-ion             pclk                   usb@04340000
+dac@0300A000           pdm@0x041D0C00         vcodec
+dma@0x4330000          reserved-memory        vi
+dwa                    reset-controller       vo
+eth_csrclk             restart-controller     vpss
+eth_ptpclk             rgn                    wiegand0
+ethernet@4070000       rtc                    wiegand1
+fast_image             rtos_cmdqu             wiegand2
+gpio@03020000          rx-queues-config       wifi-sd@4320000
+gpio@03021000          saradc                 wifi_pin
+gpio@03022000          serial@04140000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#address-cells         gpio@03023000          serial@04150000
+#size-cells            gpio@05021000          serial@04160000
+adc@0300A100           i2c@04000000           serial@04170000
+aliases                i2c@04020000           serial@041C0000
+audio_clock            i2c@04030000           soc
+base                   i2c@04040000           sound_adc
+bt_pin                 i2s@04100000           sound_dac
+chosen                 i2s@04130000           spi0@04180000
+cif                    i2s_mclk               spi1@04190000
+clk-reset-controller   i2s_subsys             spi2@041A0000
+clock-controller       ive                    spi3@041B0000
+compatible             jpu                    stmmac-axi-config
+cpus                   mars_cooling           sys
+cv-emmc@4300000        memory@80000000        sysdma_remap
+cv-sd@4310000          mipi_tx                thermal-zones
+cv-wd@0x3010000        model                  thermal@030E0000
+cvi_vc_drv             mon                    top_misc_ctrl@3000000
+cviaudio_core          name                   tpu
+cvifb                  oscillator             tx-queues-config
+cvitek-ion             pclk                   usb@04340000
+dac@0300A000           pdm@0x041D0C00         vcodec
+dma@0x4330000          reserved-memory        vi
+dwa                    reset-controller       vo
+eth_csrclk             restart-controller     vpss
+eth_ptpclk             rgn                    wiegand0
+ethernet@4070000       rtc                    wiegand1
+fast_image             rtos_cmdqu             wiegand2
+gpio@03020000          rx-queues-config       wifi-sd@4320000
+gpio@03021000          saradc                 wifi_pin
+gpio@03022000          serial@04140000
+
